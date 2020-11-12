@@ -1,0 +1,14 @@
+import java.awt.event.*;
+
+public class Listener2 implements KeyListener {
+
+	public void keyReleased (KeyEvent key) {
+		
+	}
+	public void keyTyped (KeyEvent key) {
+		
+	}
+	public void keyPressed (KeyEvent key) {
+		System.out.print(key.getKeyChar()); 
+	}
+}

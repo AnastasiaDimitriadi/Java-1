@@ -1,0 +1,13 @@
+import java.awt.event.*;
+
+public class Listener1 extends WindowAdapter implements ActionListener{
+
+	public void actionPerformed(ActionEvent e) {
+		
+		System.out.println("Hello Message sent!");
+	}
+	public void windowClosing(WindowEvent we) {
+		System.exit(0);
+	}
+
+}

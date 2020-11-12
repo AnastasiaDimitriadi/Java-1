@@ -1,0 +1,36 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class GUI {
+
+	public static void main(String [] args)
+	{
+
+	JFrame frame = new JFrame("My First GUI Program");
+	frame.setSize(400, 400); 
+	frame.addWindowListener(new Listener1());
+	
+	JPanel panel = new JPanel();
+	JLabel label = new JLabel("Input your text here:");
+	
+	JButton button = new JButton("Send Hello Message");
+	button.addActionListener(new Listener1());
+	
+	JTextArea text = new JTextArea("Write some text...");
+	text.addKeyListener(new Listener2()); 
+	
+	// Label
+	panel.add(label,BorderLayout.NORTH);
+	// TextArea
+	text.setPreferredSize(new Dimension(380,280));
+	panel.add(text,BorderLayout.CENTER);
+	// Button
+	button.setPreferredSize(new Dimension(390,50));
+	panel.add(button,BorderLayout.SOUTH);
+	
+	frame.add(panel);
+	
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+	frame.setVisible(true);
+	}
+}
